@@ -1,0 +1,99 @@
+/* ベースのスタイル */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4efe8;
+    /* 背景色 */
+    color: #333;
+    /* テキストカラー */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.register__content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    /* 全体の幅 */
+    text-align: center;
+}
+
+/* フォームタイトル */
+.register-form__heading h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #8c7b6b;
+}
+
+/* 入力フィールドのスタイル */
+.form__group {
+    margin-bottom: 20px;
+}
+
+.form__group-title {
+    text-align: left;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* 入力欄 */
+.form__input--text input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f7f7f7;
+}
+
+.form__input--text input:focus {
+    border-color: #8c7b6b;
+    outline: none;
+}
+
+/* エラーメッセージのスタイル */
+.form__error {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 5px;
+    text-align: left;
+}
+
+/* ボタン */
+.form__button {
+    margin-top: 20px;
+}
+
+.form__button-submit {
+    background-color: #8c7b6b;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.form__button-submit:hover {
+    background-color: #7a6a5e;
+}
+
+/* ログインリンク */
+.login-link {
+    margin-top: 20px;
+    display: block;
+    font-size: 14px;
+    color: #8c7b6b;
+    text-decoration: none;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
