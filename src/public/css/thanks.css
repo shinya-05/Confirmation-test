@@ -1,27 +1,52 @@
-.header {
-    background: #000;
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff;
+    font-family: "Inika", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
 
-.header__inner {
-    margin: 0 auto;
-    padding: 20px 15px;
-    max-width: 1230px;
+.thank-you-container {
+    position: relative;
+    text-align: center;
 }
 
-.header__logo {
+.thank-you-background {
+    font-size: 280px;
+    color: rgba(139, 121, 105, 0.1);
+    /* 背景のThank youを薄く表示 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+}
+
+.thank-you-message {
+    position: relative;
+    z-index: 1;
+}
+
+.thank-you-message p {
+    font-size: 30px;
+    color: #8B7969;
+    margin-bottom: 30px;
+}
+
+.thank-you-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #8B7969;
     color: #fff;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 24px;
+    font-size: 20px;
 }
 
-.thanks__content {
-    margin: 0 auto;
-    padding: 30px 15px;
-    max-width: 1230px;
-}
-
-.thanks__heading {
-    margin-bottom: 40px;
-    text-align: center;
+.thank-you-button:hover {
+    background-color: #705E51;
 }

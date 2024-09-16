@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Contact;
 use App\Models\Category;
 use App\Http\Requests\ContactRequest;
+use App\Exports\ContactsExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class ContactController extends Controller
 {
@@ -25,8 +27,8 @@ class ContactController extends Controller
     public function store(ContactRequest $request)
     {
         $contact = $request->only(['category_id', 'first_name', 'last_name', 'gender','email', 'tell1', 'tell2', 'tell3', 'address', 'building', 'detail']);
-        $contact['phone'] = $request->input('tell1') . '-' . $request->input('tell2') . '-' . $request->input('tell3');
         Contact::create($contact);
         return view('thanks');
     }
+
 }

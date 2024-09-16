@@ -8,26 +8,33 @@
   <title>Contact Form</title>
   <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
   <link rel="stylesheet" href="{{ asset('css/common.css') }}" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap" rel="stylesheet">
+
   @yield('css')
 </head>
 
 <body>
   <header class="header">
     <div class="header__inner">
-      <a class="header__logo" href="/">
-        FashionablyLate
-      </a>
+        <p class="header__logo">FashionablyLate</p>
     </div>
-    <ul class="header-nav">
-        @if (Auth::check())
-        <li class="header-nav__item">
-            <form action="/logout" method="post">
-            @csrf
-            <button class="header-nav__button">ログアウト</button>
-            </form>
-        </li>
-        @endif
-    </ul>
+    <div class="header-actions">
+            @if (Auth::check())
+                <!-- ログアウトボタン -->
+                <form action="/logout" method="post">
+                @csrf
+                <button class="header-logout__button">logout</button>
+                </form>
+            @else
+                <!-- ログインボタンと登録ボタンの切り替え -->
+                @if (request()->routeIs('register'))
+                    <a class="header-action__button" href="/login">login</a>
+                @elseif (request()->routeIs('login'))
+                    <a class="header-action__button" href="/register">register</a>
+                @endif
+            @endif
+    </div>
   </header>
 
   <main>

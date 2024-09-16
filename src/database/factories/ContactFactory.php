@@ -24,15 +24,14 @@ class ContactFactory extends Factory
   {
     return [
             'category_id' => $this->faker->numberBetween(1,5),
-            'first_name' => $this->faker->name,
-            'last_name' => $this->faker->name,
+            'last_name' => $this->faker->lastName,
+            'first_name' => $this->faker->firstName,
             'gender' => $this->faker->numberBetween(1,3),
             'email' => $this->faker->safeEmail(),
-            'tell1' => $this->faker->numberBetween(1,5),
-            'tell2' => $this->faker->numberBetween(1,5),
-            'tell3' => $this->faker->numberBetween(1,5),
-            'address' => $this->faker->text,
-            'building' => $this->faker->text,
+            'tell1' => $this->faker->randomNumber(3),
+            'tell2' => $this->faker->randomNumber(3),
+            'tell3' => $this->faker->randomNumber(3),
+            'address' => $this->faker->address,
             'detail' => $this->faker->text(120),
     ];
   }

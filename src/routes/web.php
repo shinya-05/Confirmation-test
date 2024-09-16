@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
-use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +23,11 @@ Route::get('/login', function () {
     return view('auth.login');
 })->name('login');
 
+
+
 Route::middleware('auth')->group(function () {
-    Route::get('/admin', [AuthController::class, 'admin']);
+    Route::get('/admin', [AdminController::class, 'index']);
 });
+
+
+Route::get('/export', [AdminController::class, 'export']);

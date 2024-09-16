@@ -1,99 +1,82 @@
 /* ベースのスタイル */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4efe8;
-    /* 背景色 */
-    color: #333;
-    /* テキストカラー */
+    background-color: #f5ebe0;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
-.register__content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 350px;
-    /* 全体の幅 */
-    text-align: center;
+/* コンテンツの中央寄せ */
+.contact-form__content {
+    width: 60%;
+    margin: 0 auto;
+    padding: 30px;
 }
 
-/* フォームタイトル */
+/* ヘッダー部分のスタイル */
 .register-form__heading h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #8c7b6b;
+    text-align: center;
+    font-size: 35px;
+    color: #8B7969;
+    margin-bottom: 40px;
+    font-weight: 400;
 }
 
-/* 入力フィールドのスタイル */
+.register-form__main {
+    background-color: #fff;
+    width: 700px;
+    height: 600px;
+    margin: 50px auto;
+    padding: 40px 90px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+/* フォームグループ全体 */
 .form__group {
-    margin-bottom: 20px;
+    margin-bottom: 55px;
 }
 
+/* ラベル部分 */
 .form__group-title {
-    text-align: left;
-    margin-bottom: 8px;
-    font-size: 14px;
-    color: #333;
+    font-size: 25px;
+    margin-bottom: 5px;
+    color: #8B7969;
 }
 
-/* 入力欄 */
+/* テキスト入力フィールド */
 .form__input--text input {
     width: 100%;
+    height: 55px;
     padding: 10px;
     font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #f7f7f7;
+    border: 1px solid #F4F4F4;
+    background-color: #fafafa;
+    color: #BEB1A6;
 }
 
-.form__input--text input:focus {
-    border-color: #8c7b6b;
-    outline: none;
-}
-
-/* エラーメッセージのスタイル */
+/* エラーメッセージ */
 .form__error {
-    color: #e74c3c;
     font-size: 12px;
+    color: #ff6666;
     margin-top: 5px;
-    text-align: left;
 }
 
-/* ボタン */
+/* ボタンのスタイル */
 .form__button {
-    margin-top: 20px;
+    text-align: center;
+    margin-top: 30px;
 }
 
 .form__button-submit {
-    background-color: #8c7b6b;
+    padding: 10px 20px;
+    width: 20%;
+    background-color: #8B7969;
     color: #fff;
-    padding: 12px 20px;
-    font-size: 16px;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
-    width: 100%;
+    font-size: 20px;
 }
 
 .form__button-submit:hover {
-    background-color: #7a6a5e;
-}
-
-/* ログインリンク */
-.login-link {
-    margin-top: 20px;
-    display: block;
-    font-size: 14px;
-    color: #8c7b6b;
-    text-decoration: none;
-}
-
-.login-link:hover {
-    text-decoration: underline;
+    background-color: #705a4f;
 }

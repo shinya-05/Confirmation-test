@@ -33,7 +33,7 @@ class ContactRequest extends FormRequest
             'tell3' => ['required', 'digits_between:1,5'],  // 桁数制限に変更
             'address' => ['required'],
             'building' => ['nullable'], // 建物名は必須ではない場合、nullableを使用
-         
+            'category_id' => ['required'],
             'detail' => ['required', 'max:120']
         ];
     }
@@ -53,7 +53,7 @@ class ContactRequest extends FormRequest
             'tell3.required' => '電話番号を入力してください',
             'tell3.digits_between' => '電話番号は5桁までの数字で入力してください',
             'address.required' => '住所を入力してください',
-          
+            'category_id.required' => 'お問い合わせの種類を選択してください',
             'detail.required' => 'お問い合わせ内容を入力してください',
             'detail.max:120' => 'お問合せ内容は120文字以内で入力してください',
         ];

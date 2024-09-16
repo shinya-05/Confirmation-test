@@ -7,9 +7,10 @@
 @section('content')
 <div class="login__content">
   <div class="login-form__heading">
-    <h2>ログイン</h2>
+    <h2>login</h2>
   </div>
-  <form class="form" action="/login" method="post">
+  <div class="login-form__main">
+    <form class="form" action="/login" method="post">
     @csrf
     <div class="form__group">
       <div class="form__group-title">
@@ -17,7 +18,7 @@
       </div>
       <div class="form__group-content">
         <div class="form__input--text">
-          <input type="email" name="email" value="{{ old('email') }}" />
+          <input type="email" name="email" value="{{ old('email') }}  "placeholder="例:test@example.com"  />
         </div>
         <div class="form__error">
           @error('email')
@@ -32,7 +33,7 @@
       </div>
       <div class="form__group-content">
         <div class="form__input--text">
-          <input type="password" name="password" />
+          <input type="password" name="password" placeholder="例:coachtech1106"  />
         </div>
         <div class="form__error">
           @error('password')
@@ -45,5 +46,7 @@
       <button class="form__button-submit" type="submit">ログイン</button>
     </div>
   </form>
+  </div>
+  
 </div>
 @endsection

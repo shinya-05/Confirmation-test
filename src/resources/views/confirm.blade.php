@@ -16,9 +16,9 @@
                 <tr class="confirm-table__row">
                     <th class="confirm-table__header">お名前</th>
                     <td class="confirm-table__text">
-                        <p>{{ $contact['first_name'] }} {{ $contact['last_name'] }}</p>
-                        <input type="hidden" name="first_name" value="{{ $contact['first_name'] }}"/>
+                        <p>{{ $contact['last_name'] }} {{ $contact['first_name'] }}</p>
                         <input type="hidden" name="last_name" value="{{ $contact['last_name'] }}"/>
+                        <input type="hidden" name="first_name" value="{{ $contact['first_name'] }}"/>
                     </td>
                 </tr>
                 <tr class="confirm-table__row">
@@ -50,10 +50,10 @@
                 <tr class="confirm-table__row">
                     <th class="confirm-table__header">電話番号</th>
                     <td class="confirm-table__text">
-                        <p>{{ $contact['tell1'] }}-{{ $contact['tell2'] }}-{{ $contact['tell3'] }}</p>
-                        <input type="hidden" name="tell1" value="{{ $contact['tell1'] }}"/>
-                        <input type="hidden" name="tell2" value="{{ $contact['tell2'] }}"/>
-                        <input type="hidden" name="tell3" value="{{ $contact['tell3'] }}"/>
+                        <p>{{ $contact['tell1'] }} {{ $contact['tell2'] }} {{ $contact['tell3'] }}</p>
+                        <input type="hidden" name="tell1" value="{{ $contact['tell1'] }}">
+                        <input type="hidden" name="tell2" value="{{ $contact['tell2'] }}">
+                        <input type="hidden" name="tell3" value="{{ $contact['tell3'] }}">
                     </td>
                 </tr>
                 <tr class="confirm-table__row">
