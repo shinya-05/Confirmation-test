@@ -4,7 +4,7 @@
 
 Dokerビルド
 
-　1.git
+　1.git clone git@github.com:coachtech-material/laravel-docker-template.git
 　2.docker-compose up -d -build
 　＊MySQLは、OSの起動によって起動しない場合があるのでそれぞれのPCに合わせてdocker-compose.ymlファイルを編集して下さい。
 
