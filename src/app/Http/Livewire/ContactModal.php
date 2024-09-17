@@ -16,7 +16,6 @@ class ContactModal extends Component
     // モーダルを開く
     public function openModal($contactId)
     {
-        dd("Modal Open Triggered with Contact ID: " . $contactId); // デバッグ
         $this->contact = Contact::find($contactId);
         $this->isOpen = true;
     }

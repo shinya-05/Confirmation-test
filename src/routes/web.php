@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\ModalController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +31,5 @@ Route::middleware('auth')->group(function () {
 
 
 Route::get('/export', [AdminController::class, 'export']);
+
+Route::get('/modal', [ModalController::class, 'modal']);
