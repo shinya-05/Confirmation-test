@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,8 +23,6 @@ Route::post('/thanks',[ContactController::class, 'store']);
 Route::get('/login', function () {
     return view('auth.login');
 })->name('login');
-
-
 
 Route::middleware('auth')->group(function () {
     Route::get('/admin', [AdminController::class, 'index']);

@@ -12,6 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap" rel="stylesheet">
 
   @yield('css')
+  @livewireStyles
 </head>
 
 <body>
@@ -40,6 +41,7 @@
   <main>
     @yield('content')
   </main>
+  @livewireScripts
 </body>
 
 </html>

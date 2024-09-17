@@ -87,9 +87,14 @@
                 </td>
                 <td>{{ $contact->email }}</td>
                 <td>{{ $contact->category->content ?? '' }}</td>
+                <td>
+                    <button wire:click="openModal({{ $contact->id }})">詳細</button>
+                </td>
+
             </tr>
             @endforeach
         </tbody>
+        <livewire:contact-modal />
     </table>
 
 </div>
